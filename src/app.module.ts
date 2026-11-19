@@ -3,13 +3,15 @@ import { AppConfigModule } from './app.config.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { MetricsModule } from './modules/metrics/metrics.module';
 import { HealthModule } from './modules/health/health.module';
+import { AuthDbModule } from './modules/auth-db/auth-db.module';
 
 @Module({
   imports: [
     AppConfigModule,
     HealthModule,
     MetricsModule,
-    SharedModule
+    SharedModule,
+    AuthDbModule
   ],
 })
 export class AppModule implements OnModuleInit {

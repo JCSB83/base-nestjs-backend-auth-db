@@ -22,7 +22,15 @@ const config: Config = {
     ],
 
     transform: {
-        '^.+\\.(t|j)s$': [
+        // Preserve ESM dependencies while keeping TypeScript tests in CommonJS.
+        '^.+\\.js$': [
+            'ts-jest',
+            {
+                tsconfig: 'tsconfig.spec.json',
+                useESM: true
+            }
+        ],
+        '^.+\\.ts$': [
             'ts-jest',
             {
                 tsconfig: 'tsconfig.spec.json'

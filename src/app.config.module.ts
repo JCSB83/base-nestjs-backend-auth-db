@@ -2,8 +2,12 @@ import { Global, Logger, Module, OnModuleInit } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppConfig, appConfigSchema } from './app.config';
 import { Utils } from './modules/shared/utils/utils';
+import { authDbConfigSchema } from './modules/auth-db/auth-db.config';
 
-const validationSchema = Utils.mergeConfigSchemas(appConfigSchema);
+const validationSchema = Utils.mergeConfigSchemas(
+  appConfigSchema,
+  authDbConfigSchema
+);
 
 @Global()
 @Module({
