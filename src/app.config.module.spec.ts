@@ -17,6 +17,19 @@ describe('AppConfigModule', () => {
     ENVIRONMENT: 'QA',
     LOG_MODE: 'log4js',
     LOG_LEVEL: 'INFO',
+    AUTH_DATABASE_HOST: 'localhost',
+    AUTH_DATABASE_PORT: '5432',
+    AUTH_DATABASE_USERNAME: 'user',
+    AUTH_DATABASE_PASSWORD: 'secret',
+    AUTH_DATABASE_NAME: 'auth',
+    AUTH_DATABASE_SYNCRONIZE: 'false',
+    AUTH_DATABASE_LOGGING: 'false',
+    AUTH_DATABASE_MIGRATIONSRUN: 'true',
+    AUTH_DATABASE_MAXEXECUTIONTIME: '1000',
+    JWT_SECRET: 'secret',
+    JWT_EXPIRESIN: '600',
+    JWT_REFRESH_SECRET: 'refresh',
+    JWT_REFRESH_EXPIRESIN: '3600',
   };
 
   afterEach(() => jest.restoreAllMocks());
