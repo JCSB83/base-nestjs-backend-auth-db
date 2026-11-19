@@ -44,11 +44,11 @@ describe('appConfigSchema', () => {
     expect(result.error).toBeUndefined();
     expect(result.value).toEqual({
       ...base,
-      APP_NAME: 'base-nestjs-backend',
+      APP_NAME: 'base-nestjs-backend-auth-db',
       APP_DESCRIPTION: '',
       APP_VERSION: '1.0.0',
       LOG_DIR: './logs',
-      LOG_NAME: 'base-nestjs-backend',
+      LOG_NAME: 'base-nestjs-backend-auth-db',
     });
   });
 

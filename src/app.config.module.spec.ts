@@ -28,7 +28,7 @@ describe('AppConfigModule', () => {
     expect(result).toMatchObject({
       PORT: 3000,
       EXTRA_VAR: 'preserved',
-      APP_NAME: 'base-nestjs-backend',
+      APP_NAME: 'base-nestjs-backend-auth-db',
     });
   });
 
